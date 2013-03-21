@@ -11,7 +11,7 @@ git submodule add git://github.com/Shougo/neocomplcache.git bundle/vim-neocomplc
 git submodule add git://github.com/scrooloose/nerdtree.git bundle/vim-nerdtree
 git submodule add git://github.com/tpope/vim-surround.git bundle/vim-surround
 git submodule add git://github.com/pangloss/vim-javascript.git bundle/vim-javascript
-
+git submodule add git://github.com/flazz/vim-colorschemes.git bundle/vim-colorschemes
 
 git submodule init
 git submodule update
