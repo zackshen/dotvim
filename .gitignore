@@ -1,4 +1,4 @@
 *.pyc
 .ropeproject/
 .netrwhist
-.bundle/*
+./bundle/*
