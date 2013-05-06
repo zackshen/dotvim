@@ -21,6 +21,7 @@ git submodule add git://github.com/Lokaltog/vim-powerline.git bundle/vim-powerli
 
 git submodule init
 git submodule update
+git reset HEAD --hard
 
 
 ##########################################
