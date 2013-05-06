@@ -1,3 +1,8 @@
+##########################################
+#
+# install vim plugin
+#
+##########################################
 rm -rf ~/.vimrc
 rm -rf ~/.vim
 ln -s `pwd`/vimrc ~/.vimrc
@@ -16,3 +21,16 @@ git submodule add git://github.com/Lokaltog/vim-powerline.git bundle/vim-powerli
 
 git submodule init
 git submodule update
+
+
+##########################################
+#
+# install ag searcher
+#
+##########################################
+rm -rf the_silver_searcher
+git clone git://github.com/ggreer/the_silver_searcher.git
+cd the_silver_searcher && ./build.sh
+make 
+sudo make install
+cd .. && rm -rf the_silver_searcher

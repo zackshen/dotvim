@@ -161,6 +161,7 @@ let g:neocomplcache_enable_at_startup = 1
     "}
 
     " Ack {
+        let g:ackprg = 'ag --nogroup --nocolor --column'
         nnoremap <leader>a :Ack 
     " }
 
@@ -204,3 +205,4 @@ let g:neocomplcache_enable_at_startup = 1
 " }
 
 au BufRead,BufNewFile *.js set syntax=jquery
+
