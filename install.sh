@@ -19,6 +19,7 @@ git submodule add git://github.com/pangloss/vim-javascript.git bundle/vim-javasc
 git submodule add git://github.com/flazz/vim-colorschemes.git bundle/vim-colorschemes
 git submodule add git://github.com/Lokaltog/vim-powerline.git bundle/vim-powerline
 git submodule add git://github.com/nono/jquery.vim.git bundle/vim-jquery
+git submodule add git://github.com/davidhalter/jedi-vim.git bundle/vim-jedi
 
 git submodule init
 git submodule update

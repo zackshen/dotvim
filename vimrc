@@ -204,4 +204,5 @@ let g:neocomplcache_enable_at_startup = 1
 " }
 
 au BufRead,BufNewFile *.js set syntax=jquery
-
+let g:jedi#auto_vim_configuration = 0
+let g:jedi#popup_on_dot = 0
