@@ -23,8 +23,6 @@ git submodule add git://github.com/davidhalter/jedi-vim.git bundle/vim-jedi
 
 git submodule init
 git submodule update
-git reset HEAD --hard
-
 
 ##########################################
 #
