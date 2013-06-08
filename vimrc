@@ -161,7 +161,7 @@ let g:neocomplcache_enable_at_startup = 1
 
     " Ack {
         let g:ackprg = 'ag --nogroup --nocolor --column'
-        nnoremap <leader>a :Ack 
+        noremap <Leader>a :Ack <cword><cr>
     " }
 
     " Nerdtree {
