@@ -70,6 +70,7 @@ behave mswin
     " GVIM- (here instead of .gvimrc)
     set nu
     set nobackup
+    set cursorline
     if has('gui_running')
         set guioptions-=m
         set guioptions-=T           " remove the toolbar
