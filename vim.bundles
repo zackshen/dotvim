@@ -1,0 +1,20 @@
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-fugitive'
+Bundle 'kien/ctrlp.vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'Shougo/neocomplcache'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-surround'
+Bundle 'pangloss/vim-javascript'
+Bundle 'flazz/vim-colorschemes'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'nono/jquery.vim'
+Bundle 'davidhalter/jedi-vim'
+Bundle 'jnwhiteh/vim-golang'
+Bundle 'spf13/vim-gocode'
+Bundle 'Lokaltog/powerline'
