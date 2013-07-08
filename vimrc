@@ -145,7 +145,13 @@ behave mswin
     set wildmenu 
 " }
 
-au BufRead,BufNewFile *.js set syntax=jquery
-let g:jedi#auto_vim_configuration = 0
-let g:jedi#popup_on_dot = 0
+" JQuery {
+    au BufRead,BufNewFile *.js set syntax=jquery	
+}
+
+" youcompleteme {
+    let g:ycm_autoclose_preview_window_after_completion=1
+    nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
+}
+
 
