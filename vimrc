@@ -152,4 +152,9 @@ behave mswin
 " youcompleteme {
     let g:ycm_autoclose_preview_window_after_completion=1
     nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
+    let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 "}
+
+" godef {
+    let g:godef_split=0
+" }
