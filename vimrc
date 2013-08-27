@@ -1,6 +1,7 @@
 set nocompatible               " be iMproved
 set encoding=utf-8
 set fileencodings=utf-8,gbk
+set term=screen-256color
 
 filetype on
 filetype off                   " required!
