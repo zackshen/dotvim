@@ -159,3 +159,8 @@ behave mswin
 " godef {
     let g:godef_split=0
 " }
+
+" Emmet {
+    let g:user_emmet_expandabbr_key = ',e'
+    let g:use_emmet_complete_tag = 1
+"}
