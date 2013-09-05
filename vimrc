@@ -175,3 +175,8 @@ behave mswin
   let g:airline_symbols.readonly = '⭤'
   let g:airline_symbols.linenr = '⭡'
 " }
+
+" auto save
+if has("autocmd")
+    autocmd! bufwritepost .vimrc source $MYVIMRC
+endif
