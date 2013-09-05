@@ -163,4 +163,15 @@ behave mswin
 " Emmet {
     let g:user_emmet_expandabbr_key = ',e'
     let g:use_emmet_complete_tag = 1
-"}
+" }
+
+" Airline {
+  let g:airline_symbols = {}
+  let g:airline_left_sep = '⮀'
+  let g:airline_left_alt_sep = '⮁'
+  let g:airline_right_sep = '⮂'
+  let g:airline_right_alt_sep = '⮃'
+  let g:airline_symbols.branch = '⭠'
+  let g:airline_symbols.readonly = '⭤'
+  let g:airline_symbols.linenr = '⭡'
+" }
