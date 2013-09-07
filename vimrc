@@ -27,6 +27,7 @@ behave mswin
 	set tabstop=4                   " an indentation every four columns
 	set softtabstop=4               " let backspace delete indents
 	autocmd FileType c,cpp,java,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+    autocmd FileType go autocmd BufWritePre <buffer> Fmt
 "}
 
 " Nerdtree {
@@ -105,7 +106,7 @@ behave mswin
     " Save {
        map ,s :w<CR>
        map ,nq :q!<CR>
-       map ,q :wq<CR>
+       map ,q :wqa<CR>
     " }
 " }
 
@@ -140,17 +141,23 @@ behave mswin
 " }
 
 " Airline {
-  let g:airline_symbols = {}
-  let g:airline_left_sep = '⮀'
-  let g:airline_left_alt_sep = '⮁'
-  let g:airline_right_sep = '⮂'
-  let g:airline_right_alt_sep = '⮃'
-  let g:airline_symbols.branch = '⭠'
-  let g:airline_symbols.readonly = '⭤'
-  let g:airline_symbols.linenr = '⭡'
+    let g:airline_symbols = {}
+    let g:airline_left_sep = '⮀'
+    let g:airline_left_alt_sep = '⮁'
+    let g:airline_right_sep = '⮂'
+    let g:airline_right_alt_sep = '⮃'
+    let g:airline_symbols.branch = '⭠'
+    let g:airline_symbols.readonly = '⭤'
+    let g:airline_symbols.linenr = '⭡'
 " }
 
-" auto save
+" auto save {
 if has("autocmd")
     autocmd! bufwritepost .vimrc source $MYVIMRC
 endif
+" }
+
+" Json {
+    nmap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
+" }
+
