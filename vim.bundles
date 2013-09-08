@@ -1,27 +1,46 @@
-set nocompatible
-filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
+" IDE feature
 Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-surround'
-Bundle 'pangloss/vim-javascript'
 Bundle 'flazz/vim-colorschemes'
-Bundle 'nono/jquery.vim'
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'spf13/vim-gocode'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'terryma/vim-multiple-cursors'
-Bundle 'dgryski/vim-godef'
 Bundle 'vim-scripts/DrawIt'
-Bundle 'mattn/emmet-vim'
-Bundle 'ap/vim-css-color'
 Bundle 'Raimondi/delimitMate'
 Bundle 'bling/vim-airline'
 Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/vimshell.vim'
+
+" Source Control
+" ========================================
+Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
+" ========================================
+
+" Go
+" ========================================
+Bundle 'jnwhiteh/vim-golang'
+Bundle 'spf13/vim-gocode'
+Bundle 'dgryski/vim-godef'
+" ========================================
+
+" Python, C, C++
+" ========================================
+Bundle 'Valloric/YouCompleteMe'
+" ========================================
+
+" Html, Css
+" ========================================
+Bundle 'mattn/emmet-vim'
+Bundle 'ap/vim-css-color'
+" ========================================
+
+" Javascript
+" ========================================
+Bundle 'pangloss/vim-javascript'
+Bundle 'nono/jquery.vim'
+" ========================================

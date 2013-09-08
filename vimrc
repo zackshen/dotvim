@@ -3,11 +3,6 @@ set encoding=utf-8
 set fileencodings=utf-8,gbk
 set term=screen-256color
 
-filetype on
-filetype off                   " required!
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
 " Bundles {
     if filereadable(expand("~/.vim/vim.bundles"))
         source ~/.vim/vim.bundles
@@ -41,29 +36,22 @@ behave mswin
 " }
 
 " GUI Settings {
-    "for windows
-	"au GUIEnter * simalt ~x 
-    " GVIM- (here instead of .gvimrc)
     set nu
     set nobackup
     set cursorline
+    set hlsearch
+    set incsearch
     if has('gui_running')
         set guioptions-=m
-        set guioptions-=T           " remove the toolbar
+        set guioptions-=T
 	    set guioptions-=r
 	    set guioptions-=L
         set lines=40                " 40 lines of text instead of 24,
-        "color molokai
         color molokai
-        " font
-        "set guifont=monaco\ 12
         set guifont=monaco\ for\ Powerline:h14
-        "set gfw=Microsoft\ YaHei\ 11
     else
         set t_Co=256
         color wombat256mod
-        set hlsearch
-        "set term=builtin_ansi       " Make arrow and other keys work
     endif
 " }
 
