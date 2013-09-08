@@ -16,31 +16,25 @@ Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/vimshell.vim'
 
 " Source Control
-" ========================================
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
-" ========================================
 
 " Go
-" ========================================
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'spf13/vim-gocode'
 Bundle 'dgryski/vim-godef'
-" ========================================
 
 " Python, C, C++
-" ========================================
 Bundle 'Valloric/YouCompleteMe'
-" ========================================
+"Bundle 'davidhalter/jedi-vim'
 
 " Html, Css
-" ========================================
 Bundle 'mattn/emmet-vim'
 Bundle 'ap/vim-css-color'
-" ========================================
 
 " Javascript
-" ========================================
 Bundle 'pangloss/vim-javascript'
 Bundle 'nono/jquery.vim'
-" ========================================
+
+" Coffeescript
+Bundle 'kchmck/vim-coffee-script'
