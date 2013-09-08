@@ -14,6 +14,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'bling/vim-airline'
 Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/vimshell.vim'
+Bundle 'godlygeek/tabular'
 
 " Source Control
 Bundle 'tpope/vim-fugitive'
