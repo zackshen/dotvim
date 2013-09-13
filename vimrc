@@ -1,3 +1,4 @@
+scriptencoding utf-8
 set nocompatible               " be iMproved
 set encoding=utf-8
 set fileencodings=utf-8,gbk
@@ -51,6 +52,7 @@ behave mswin
         set guifont=monaco\ for\ Powerline:h14
     else
         set t_Co=256
+        let NERDTreeDirArrows=0
         color wombat256mod
     endif
 " }
@@ -76,20 +78,6 @@ behave mswin
         imap <F4> <ESC>:NERDTreeToggle<CR>
 
     "}
-    
-    " Run {
-       func! CompileAndRun()
-           if &filetype == 'go'
-               :!go run %
-           elseif &filetype == 'python'
-               :!python %
-           endif
-       endf
-
-       map <F5> :call CompileAndRun()<CR>
-       map <F6> :!svn revert %<CR>
-       map <F7> :!svn diff %<CR>
-    " }
 
     " Save {
        map ,s :w<CR>
@@ -130,13 +118,14 @@ behave mswin
 
 " Airline {
     let g:airline_symbols = {}
-    let g:airline_left_sep = '⮀'
-    let g:airline_left_alt_sep = '⮁'
-    let g:airline_right_sep = '⮂'
-    let g:airline_right_alt_sep = '⮃'
-    let g:airline_symbols.branch = '⭠'
-    let g:airline_symbols.readonly = '⭤'
-    let g:airline_symbols.linenr = '⭡'
+    let g:airline_left_sep = ''
+    let g:airline_left_alt_sep = ''
+    let g:airline_right_sep = ''
+    let g:airline_right_alt_sep = ''
+    let g:airline_symbols.branch = ''
+    let g:airline_symbols.readonly = ''
+    let g:airline_symbols.linenr = ''
+    let g:airline_theme="powerlineish"
 " }
 
 " auto save {
@@ -148,3 +137,7 @@ endif
 " Json {
     nmap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
 " }
+
+" GitGutter {
+    let g:gitgutter_enabled = 0
+"
