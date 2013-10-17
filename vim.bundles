@@ -32,6 +32,7 @@ Bundle 'Valloric/YouCompleteMe'
 " Html, Css
 Bundle 'mattn/emmet-vim'
 Bundle 'ap/vim-css-color'
+Bundle 'groenewege/vim-less'
 
 " Javascript
 Bundle 'pangloss/vim-javascript'
