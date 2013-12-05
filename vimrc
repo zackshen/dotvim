@@ -68,7 +68,7 @@ behave mswin
     "}
 
     " Ack {
-        let g:ackprg = 'ack --nogroup --nocolor --column'
+        let g:ackprg = 'ag --nogroup --nocolor --column'
         noremap <Leader>a :Ack 
     " }
 

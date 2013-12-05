@@ -12,8 +12,6 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'vim-scripts/DrawIt'
 Bundle 'Raimondi/delimitMate'
 Bundle 'bling/vim-airline'
-Bundle 'Shougo/vimproc.vim'
-Bundle 'Shougo/vimshell.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-commentary'
 Bundle 'scrooloose/syntastic'
@@ -35,6 +33,7 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'mattn/emmet-vim'
 Bundle 'ap/vim-css-color'
 Bundle 'groenewege/vim-less'
+Bundle 'digitaltoad/vim-jade'
 
 " Javascript
 Bundle 'pangloss/vim-javascript'
@@ -42,3 +41,7 @@ Bundle 'nono/jquery.vim'
 
 " Coffeescript
 Bundle 'kchmck/vim-coffee-script'
+
+" github
+Bundle 'mattn/gist-vim'
+Bundle 'mattn/webapi-vim'
