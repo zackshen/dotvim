@@ -68,7 +68,7 @@ behave mswin
     "}
 
     " Ack {
-        let g:ackprg = 'ag --nogroup --nocolor --column'
+        let g:ackprg = 'ag --nogroup --nocolor --column --ignore-dir fixture --ignore-dir idetest --ignore-dir jstest'
         noremap <Leader>a :Ack 
     " }
 
@@ -141,3 +141,7 @@ endif
 " GitGutter {
     let g:gitgutter_enabled = 0
 "
+
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_flake8_args = '--ignore="E501,E302,E261,E701,E241,E126,E127,E128,W801"'
+
