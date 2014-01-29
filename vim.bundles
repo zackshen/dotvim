@@ -14,7 +14,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'bling/vim-airline'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-commentary'
-"Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/syntastic'
 Bundle 'kevinw/pyflakes-vim'
 Bundle 'majutsushi/tagbar'
 
