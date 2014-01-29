@@ -14,7 +14,8 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'bling/vim-airline'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-commentary'
-Bundle 'scrooloose/syntastic'
+"Bundle 'scrooloose/syntastic'
+Bundle 'kevinw/pyflakes-vim'
 Bundle 'majutsushi/tagbar'
 
 " Source Control
@@ -28,7 +29,7 @@ Bundle 'dgryski/vim-godef'
 
 " Python, C, C++
 Bundle 'Valloric/YouCompleteMe'
-"Bundle 'davidhalter/jedi-vim'
+Bundle 'hdima/python-syntax'
 
 " Html, Css
 Bundle 'mattn/emmet-vim'
@@ -39,6 +40,8 @@ Bundle 'digitaltoad/vim-jade'
 " Javascript
 Bundle 'pangloss/vim-javascript'
 Bundle 'nono/jquery.vim'
+"Bundle 'marijnh/tern_for_vim'
+Bundle 'elzr/vim-json'
 
 " Coffeescript
 Bundle 'kchmck/vim-coffee-script'

@@ -142,6 +142,17 @@ endif
     let g:gitgutter_enabled = 0
 "
 
-let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_args = '--ignore="E501,E302,E261,E701,E241,E126,E127,E128,W801"'
+" syntasitic {
+    let g:syntastic_python_checkers = ['pyflakes']
+    let g:syntastic_enable_highlighting = 0
+    let g:syntastic_check_on_open = 1
+" }
 
+" pyflakes {
+    let g:pyflakes_use_quickfix = 0
+" }
+
+
+" python {
+    let python_highlight_all = 1
+"
