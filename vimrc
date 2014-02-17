@@ -143,15 +143,10 @@ endif
 "
 
 " syntasitic {
-    let g:syntastic_python_checkers = ['pyflakes']
+    let g:syntastic_python_checkers = ['frosted']
     let g:syntastic_enable_highlighting = 0
     let g:syntastic_check_on_open = 1
 " }
-
-" pyflakes {
-    let g:pyflakes_use_quickfix = 0
-" }
-
 
 " python {
     let python_highlight_all = 1
