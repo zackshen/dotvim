@@ -147,7 +147,3 @@ endif
     let g:syntastic_enable_highlighting = 0
     let g:syntastic_check_on_open = 1
 " }
-
-" python {
-    let python_highlight_all = 1
-"

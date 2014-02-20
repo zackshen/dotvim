@@ -28,7 +28,6 @@ Bundle 'dgryski/vim-godef'
 
 " Python, C, C++
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'hdima/python-syntax'
 
 " Html, Css
 Bundle 'mattn/emmet-vim'
