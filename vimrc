@@ -14,6 +14,7 @@ filetype plugin indent on
 syntax on
 source $VIMRUNTIME/vimrc_example.vim
 behave mswin
+set iskeyword+=-
 
 " Formatting {
 	set nowrap                      " wrap long lines

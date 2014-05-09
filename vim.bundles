@@ -16,6 +16,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-commentary'
 Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
+Bundle 'yonchu/accelerated-smooth-scroll'
 
 " Source Control
 Bundle 'tpope/vim-fugitive'
