@@ -12,6 +12,12 @@ set iskeyword+=-
     endif
 " }
 
+" Bundles {
+    if filereadable(expand("~/.vim/vim.ignore"))
+        source ~/.vim/vim.ignore
+    endif
+" }
+
 filetype plugin indent on
 syntax on
 source $VIMRUNTIME/vimrc_example.vim
