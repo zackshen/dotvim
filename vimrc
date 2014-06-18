@@ -152,7 +152,11 @@ endif
 "
 
 " syntasitic {
-    let g:syntastic_python_checkers = ['frosted']
+    let g:syntastic_html_checkers=['']
     let g:syntastic_enable_highlighting = 0
-    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_open = 0
+    let g:syntastic_enable_signs = 1
+    let g:syntastic_auto_jump = 0
+    let g:syntastic_auto_loc_list = 0
+
 " }

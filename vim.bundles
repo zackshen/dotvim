@@ -16,7 +16,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-commentary'
 Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
-Bundle 'yonchu/accelerated-smooth-scroll'
+" Bundle 'yonchu/accelerated-smooth-scroll'
 
 " Source Control
 Bundle 'tpope/vim-fugitive'
@@ -39,7 +39,7 @@ Bundle 'digitaltoad/vim-jade'
 " Javascript
 Bundle 'pangloss/vim-javascript'
 Bundle 'nono/jquery.vim'
-"Bundle 'marijnh/tern_for_vim'
+Bundle 'marijnh/tern_for_vim'
 Bundle 'elzr/vim-json'
 
 " Coffeescript
