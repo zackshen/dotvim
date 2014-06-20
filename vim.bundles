@@ -4,6 +4,7 @@ call vundle#rc()
 " IDE feature
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
+Bundle 'tacahiroy/ctrlp-funky'
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-surround'
@@ -16,7 +17,8 @@ Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-commentary'
 Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
-" Bundle 'yonchu/accelerated-smooth-scroll'
+Bundle 'kevinw/pyflakes-vim'
+Bundle 'vim-scripts/TaskList.vim'
 
 " Source Control
 Bundle 'tpope/vim-fugitive'

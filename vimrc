@@ -24,6 +24,21 @@ source $VIMRUNTIME/vimrc_example.vim
 behave mswin
 set iskeyword+=-
 
+" auto save {
+    if has("autocmd")
+        autocmd! bufwritepost .vimrc source $MYVIMRC
+    endif
+" }
+
+" Undo {
+    set undolevels=1000         " How many undos
+    set undoreload=10000        " number of lines to save for undo
+    if v:version >= 730
+        set undofile            " keep a persistent backup file
+        set undodir=/tmp/vimundo/
+    endif
+" }
+
 " Formatting {
 	set nowrap                      " wrap long lines
 	set autoindent                  " indent at the same level of the previous line
@@ -48,6 +63,7 @@ set iskeyword+=-
 " GUI Settings {
     set nu
     set nobackup
+    set noswapfile
     set cursorline
     set hlsearch
     set incsearch
@@ -113,7 +129,12 @@ set iskeyword+=-
 " youcompleteme {
     let g:ycm_autoclose_preview_window_after_completion=1
     nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
-    let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+    if !empty(glob("~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"))
+        let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"
+    endif
+    if !empty(glob("~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"))
+        let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
+    endif
 "}
 
 " godef {
@@ -126,22 +147,37 @@ set iskeyword+=-
 " }
 
 " Airline {
-    let g:airline_symbols = {}
-    let g:airline_left_sep = ''
-    let g:airline_left_alt_sep = ''
-    let g:airline_right_sep = ''
-    let g:airline_right_alt_sep = ''
-    let g:airline_symbols.branch = ''
-    let g:airline_symbols.readonly = ''
-    let g:airline_symbols.linenr = ''
-    let g:airline_theme="powerlineish"
+    if !exists('g:airline_symbols')
+        let g:airline_symbols = {}
+    endif
+
+    " let g:airline_powerline_fonts = 1
+    let g:airline_enable_branch     = 1
+    let g:airline_enable_syntastic  = 1
+
+    let g:airline_theme             = 'badwolf'
+    let g:airline_left_sep          = '⮀'
+    let g:airline_left_alt_sep      = '⮁'
+    let g:airline_right_sep         = '⮂'
+    let g:airline_right_alt_sep     = '⮃'
+
+    " let g:airline_left_sep = '»'
+    " let g:airline_left_sep = '▶'
+    " let g:airline_right_sep = '«'
+    " let g:airline_right_sep = '◀'
+
+    let g:airline_symbols.linenr = '␊'
+    let g:airline_symbols.linenr = '␤'
+    let g:airline_symbols.linenr = '¶'
+    let g:airline_symbols.branch = '⎇'
+    " let g:airline_symbols.branch = '⭠'
+    let g:airline_symbols.paste = 'ρ'
+    let g:airline_symbols.paste = 'Þ'
+    let g:airline_symbols.paste = '∥'
+    let g:airline_symbols.readonly = '⭤'
+    let g:airline_symbols.whitespace = 'Ξ'
 " }
 
-" auto save {
-if has("autocmd")
-    autocmd! bufwritepost .vimrc source $MYVIMRC
-endif
-" }
 
 " Json {
     nmap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
@@ -152,11 +188,18 @@ endif
 "
 
 " syntasitic {
-    let g:syntastic_html_checkers=['']
-    let g:syntastic_enable_highlighting = 0
-    let g:syntastic_check_on_open = 0
-    let g:syntastic_enable_signs = 1
-    let g:syntastic_auto_jump = 0
-    let g:syntastic_auto_loc_list = 0
+    let g:syntastic_error_symbol='>>'
+    let g:syntastic_warning_symbol='>'
+    let g:syntastic_check_on_open=1
+    let g:syntastic_enable_highlighting=0
+    let g:syntastic_python_checkers=['pyflakes']
+    let g:syntastic_javascript_checkers = ['jshint']
+    let g:pyflakes_use_quickfix = 0
+" }
 
+" Ctrl-p {
+    let g:ctrlp_extensions = ['funky']
+    let g:ctrlp_funky_syntax_highlight = 1
+    nnoremap <Leader>fu :CtrlPFunky<Cr>
+    nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 " }
