@@ -93,7 +93,7 @@ set iskeyword+=-
     "}
 
     " Ack {
-        let g:ackprg = 'ag --nogroup --nocolor --column --ignore-dir fixture --ignore-dir idetest --ignore-dir jstest'
+        let g:ackprg = 'ag --nogroup --nocolor --column --ignore-dir fixture --ignore-dir fixtures --ignore-dir idetest --ignore-dir jstest --ignore "data.json"'
         noremap <Leader>a :Ack 
     " }
 
@@ -130,12 +130,27 @@ set iskeyword+=-
     let g:ycm_autoclose_preview_window_after_completion=1
     nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
     if !empty(glob("~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"))
-        let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"
+        let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
     endif
     if !empty(glob("~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"))
-        let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
+        let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
     endif
+    let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 "}
+
+
+" jedi {
+    autocmd FileType python setlocal completeopt-=preview
+    " let g:jedi#use_tabs_not_buffers = 0
+    " work with ycm
+    let g:jedi#auto_vim_configuration = 0
+    let g:jedi#popup_on_dot = 0
+    let g:jedi#popup_select_first = 0
+    let g:jedi#completions_enabled = 0
+    let g:jedi#completions_command = ""
+    let g:jedi#show_call_signatures = "1"
+" }
+
 
 " godef {
     let g:godef_split=0
@@ -176,6 +191,8 @@ set iskeyword+=-
     let g:airline_symbols.paste = '∥'
     let g:airline_symbols.readonly = '⭤'
     let g:airline_symbols.whitespace = 'Ξ'
+
+    " let g:airline_section_c = '%t'
 " }
 
 
@@ -202,4 +219,10 @@ set iskeyword+=-
     let g:ctrlp_funky_syntax_highlight = 1
     nnoremap <Leader>fu :CtrlPFunky<Cr>
     nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+" }
+
+" tern {
+    let g:tern_map_keys=1
+    let g:tern_show_argument_hints='on_hold'
+    let g:tern_show_signature_in_pum=1
 " }

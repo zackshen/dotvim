@@ -23,14 +23,16 @@ Bundle 'vim-scripts/TaskList.vim'
 " Source Control
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'vim-scripts/vcscommand.vim'
 
 " Go
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'spf13/vim-gocode'
 Bundle 'dgryski/vim-godef'
 
-" Python, C, C++
+" Python
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'davidhalter/jedi-vim'
 
 " Html, Css
 Bundle 'mattn/emmet-vim'
