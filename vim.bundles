@@ -18,12 +18,15 @@ Bundle 'tpope/vim-commentary'
 Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
 Bundle 'kevinw/pyflakes-vim'
-Bundle 'vim-scripts/TaskList.vim'
+Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
+"Bundle 'vim-scripts/TaskList.vim'
 
 " Source Control
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'vim-scripts/vcscommand.vim'
+Bundle 'zackshen/vim-svnlog'
 
 " Go
 Bundle 'jnwhiteh/vim-golang'

@@ -128,6 +128,8 @@ set iskeyword+=-
 
 " youcompleteme {
     let g:ycm_autoclose_preview_window_after_completion=1
+
+    let g:ycm_seed_identifiers_with_syntax=1
     nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
     if !empty(glob("~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"))
         let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
@@ -141,8 +143,8 @@ set iskeyword+=-
 
 " jedi {
     autocmd FileType python setlocal completeopt-=preview
-    " let g:jedi#use_tabs_not_buffers = 0
     " work with ycm
+    let g:jedi#use_tabs_not_buffers = 0
     let g:jedi#auto_vim_configuration = 0
     let g:jedi#popup_on_dot = 0
     let g:jedi#popup_select_first = 0
@@ -151,6 +153,13 @@ set iskeyword+=-
     let g:jedi#show_call_signatures = "1"
 " }
 
+" ultisnips {
+
+    let g:UltiSnipsExpandTrigger="<leader>s"
+    let g:UltiSnipsJumpForwardTrigger="<c-b>"
+    let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" }
 
 " godef {
     let g:godef_split=0
