@@ -29,9 +29,7 @@ Bundle 'vim-scripts/vcscommand.vim'
 Bundle 'zackshen/vim-svnlog'
 
 " Go
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'spf13/vim-gocode'
-Bundle 'dgryski/vim-godef'
+Bundle 'fatih/vim-go'
 
 " Python
 Bundle 'Valloric/YouCompleteMe'

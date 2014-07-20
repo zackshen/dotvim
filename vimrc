@@ -47,7 +47,7 @@ set iskeyword+=-
 	set tabstop=4                   " an indentation every four columns
 	set softtabstop=4               " let backspace delete indents
 	autocmd FileType c,cpp,java,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
-    autocmd FileType go autocmd BufWritePre <buffer> Fmt
+    " autocmd FileType go autocmd BufWritePre <buffer> Fmt
 "}
 
 " Nerdtree {
@@ -128,8 +128,9 @@ set iskeyword+=-
 
 " youcompleteme {
     let g:ycm_autoclose_preview_window_after_completion=1
-
     let g:ycm_seed_identifiers_with_syntax=1
+    let g:jedi#goto_assignments_command='<leader>jg'
+    let g:jedi#goto_definitions_command='<leader>jd'
     nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
     if !empty(glob("~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"))
         let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
@@ -137,7 +138,6 @@ set iskeyword+=-
     if !empty(glob("~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"))
         let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
     endif
-    let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 "}
 
 
@@ -154,15 +154,9 @@ set iskeyword+=-
 " }
 
 " ultisnips {
-
     let g:UltiSnipsExpandTrigger="<leader>s"
     let g:UltiSnipsJumpForwardTrigger="<c-b>"
     let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" }
-
-" godef {
-    let g:godef_split=0
 " }
 
 " Emmet {
@@ -175,31 +169,21 @@ set iskeyword+=-
         let g:airline_symbols = {}
     endif
 
-    " let g:airline_powerline_fonts = 1
     let g:airline_enable_branch     = 1
     let g:airline_enable_syntastic  = 1
 
     let g:airline_theme             = 'badwolf'
-    let g:airline_left_sep          = '⮀'
-    let g:airline_left_alt_sep      = '⮁'
-    let g:airline_right_sep         = '⮂'
-    let g:airline_right_alt_sep     = '⮃'
+    " let g:airline_left_sep          = '⮀'
+    " let g:airline_left_alt_sep      = '⮁'
+    " let g:airline_right_sep         = '⮂'
+    " let g:airline_right_alt_sep     = '⮃'
+    let g:airline_left_sep          = ''
+    let g:airline_left_alt_sep      = ''
+    let g:airline_right_sep         = ''
+    let g:airline_right_alt_sep     = ''
 
-    " let g:airline_left_sep = '»'
-    " let g:airline_left_sep = '▶'
-    " let g:airline_right_sep = '«'
-    " let g:airline_right_sep = '◀'
-
-    let g:airline_symbols.linenr = '␊'
-    let g:airline_symbols.linenr = '␤'
-    let g:airline_symbols.linenr = '¶'
-    let g:airline_symbols.branch = '⎇'
-    " let g:airline_symbols.branch = '⭠'
-    let g:airline_symbols.paste = 'ρ'
-    let g:airline_symbols.paste = 'Þ'
-    let g:airline_symbols.paste = '∥'
+    let g:airline_symbols.branch = '⭠'
     let g:airline_symbols.readonly = '⭤'
-    let g:airline_symbols.whitespace = 'Ξ'
 
     " let g:airline_section_c = '%t'
 " }
@@ -234,4 +218,23 @@ set iskeyword+=-
     let g:tern_map_keys=1
     let g:tern_show_argument_hints='on_hold'
     let g:tern_show_signature_in_pum=1
+" }
+
+" vim-go {
+    let g:go_bin_path = "~/Documents/go/bin/"
+    let g:go_disable_autoinstall = 1
+
+    " type info
+    au FileType go nmap <Leader>i <Plug>(go-info)
+    " godoc
+    au FileType go nmap <Leader>gd <Plug>(go-doc)
+    au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+    au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+    " go-run go-build go-test
+    au FileType go nmap <leader>r <Plug>(go-run)
+    au FileType go nmap <leader>b <Plug>(go-build)
+    au FileType go nmap <leader>t <Plug>(go-test)
+    " godef
+    au FileType go nmap <leader>g <Plug>(go-def)
+    au FileType go nmap <Leader>ds <Plug>(go-def-split)
 " }
