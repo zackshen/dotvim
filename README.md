@@ -15,3 +15,19 @@
 ##Install Ternjs
     # cd ~/.vim/bundle/tern_for_vim
     # npm install 
+
+##Install Go ToolChain
+because of `GFW`, we can't install some go package,
+but you can set http_proxy for go get, like below
+
+###start a goagent proxy, it will proxy at http://127.0.0.1:8087
+    # python proxy.py
+
+###install toolchain
+    # http_proxy=127.0.0.1:8087 go get -v github.com/nsf/gocode
+    # http_proxy=127.0.0.1:8087 go get -v code.google.com/p/go.tools/cmd/goimports
+    # http_proxy=127.0.0.1:8087 go get -v code.google.com/p/rog-go/exp/cmd/godef
+    # http_proxy=127.0.0.1:8087 go get -v code.google.com/p/go.tools/cmd/oracle
+    # http_proxy=127.0.0.1:8087 go get -v github.com/kisielk/errcheck
+    # http_proxy=127.0.0.1:8087 go get -v github.com/golang/lint/golint
+    # http_proxy=127.0.0.1:8087 go get -v github.com/jstemmer/gotags
