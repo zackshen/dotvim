@@ -5,6 +5,9 @@ set fileencodings=utf-8,gbk
 set term=screen-256color
 set wildignorecase
 set iskeyword+=-
+set mouse-=a
+set selection=inclusive
+set selectmode=mouse,key
 
 " Bundles {
     if filereadable(expand("~/.vim/vim.bundles"))
@@ -221,7 +224,7 @@ set iskeyword+=-
 " }
 
 " vim-go {
-    let g:go_bin_path = "~/Documents/go/bin/"
+    let g:go_bin_path = "/home/vagrant/documents/go/bin/"
     let g:go_disable_autoinstall = 1
 
     " type info
