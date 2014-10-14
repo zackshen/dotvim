@@ -10,7 +10,7 @@
 
 ##Install The_silver_searcher
 
-    # [Ref] https://github.com/ggreer/the_silver_searcher
+    https://github.com/ggreer/the_silver_searcher
 
 ##Install YouCompleteMe
     # cd ~/.vim/bundle/YouCompleteMe/
