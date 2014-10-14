@@ -8,6 +8,10 @@
     # run ./install.sh, and wait a mintue, maybe has some error would happen
     # if has error happened, exit it and open vim, run :BundleInstall
 
+##Install The_silver_searcher
+
+    # [Ref] https://github.com/ggreer/the_silver_searcher
+
 ##Install YouCompleteMe
     # cd ~/.vim/bundle/YouCompleteMe/
     # ./install.sh --clang-completer
