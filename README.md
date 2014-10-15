@@ -10,7 +10,7 @@
 
 ##Install The_silver_searcher
 
-    https://github.com/ggreer/the_silver_searcher
+[Reference This Guide](https://github.com/ggreer/the_silver_searcher)
 
 ##Install YouCompleteMe
     # cd ~/.vim/bundle/YouCompleteMe/
@@ -35,3 +35,7 @@ but you can set http_proxy for go get, like below
     # http_proxy=127.0.0.1:8087 go get -v github.com/kisielk/errcheck
     # http_proxy=127.0.0.1:8087 go get -v github.com/golang/lint/golint
     # http_proxy=127.0.0.1:8087 go get -v github.com/jstemmer/gotags
+
+## Install vim-instant-markdown
+
+[Reference The Guide](https://github.com/suan/vim-instant-markdown)

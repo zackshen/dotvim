@@ -21,6 +21,7 @@ Bundle 'kevinw/pyflakes-vim'
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 "Bundle 'vim-scripts/TaskList.vim'
+Bundle 'suan/vim-instant-markdown'
 
 " Source Control
 Bundle 'tpope/vim-fugitive'
