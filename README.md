@@ -39,3 +39,167 @@ but you can set http_proxy for go get, like below
 ## Install vim-instant-markdown
 
 [Reference The Guide](https://github.com/suan/vim-instant-markdown)
+
+## Plugins
+
+<table style="width:100%;">
+<thead>
+<th style="width:30%;">Name</th>
+<th style="width:70%;">Desc</th>
+</thead>
+<tbody>
+<tr>
+    <td>vundle</td>
+    <td></td>
+</tr>
+<tr>
+    <td>CtrlP</td>
+    <td></td>
+</tr>
+<tr>
+    <td>ctrlp-funky</td>
+    <td></td>
+</tr>
+<tr>
+    <td>ack.vim</td>
+    <td></td>
+</tr>
+<tr>
+    <td>nerdtree</td>
+    <td></td>
+</tr>
+<tr>
+    <td>vim-surround</td>
+    <td></td>
+</tr>
+<tr>
+    <td>vim-colorschemes</td>
+    <td></td>
+</tr>
+<tr>
+    <td>vim-multiple-cursors</td>
+    <td></td>
+</tr>
+<tr>
+    <td>DrawIt</td>
+    <td></td>
+</tr>
+<tr>
+    <td>delimitMate</td>
+    <td></td>
+</tr>
+<tr>
+    <td>vim-airline</td>
+    <td></td>
+</tr>
+<tr>
+    <td>tabular</td>
+    <td></td>
+</tr>
+<tr>
+    <td>vim-commentary</td>
+    <td></td>
+</tr>
+<tr>
+    <td>syntastic</td>
+    <td></td>
+</tr>
+<tr>
+    <td>tagbar</td>
+    <td></td>
+</tr>
+<tr>
+    <td>pyflakes-vim</td>
+    <td></td>
+</tr>
+<tr>
+    <td>ultisnips</td>
+    <td></td>
+</tr>
+<tr>
+    <td>vim-snippets</td>
+    <td></td>
+</tr>
+<tr>
+    <td>TaskList.vim</td>
+    <td></td>
+</tr>
+<tr>
+    <td>TaskList.vim</td>
+    <td></td>
+</tr>
+<tr>
+    <td>vim-instant-markdown</td>
+    <td></td>
+</tr>
+<tr>
+    <td>vim-fugitive</td>
+    <td></td>
+</tr>
+<tr>
+    <td>vim-gitgutter</td>
+    <td></td>
+</tr>
+<tr>
+    <td>vsccommand.vim</td>
+    <td></td>
+</tr>
+<tr>
+    <td>vim-svnlog</td>
+    <td></td>
+</tr>
+<tr>
+    <td>vim-go</td>
+    <td></td>
+</tr>
+<tr>
+    <td>YouCompleteMe</td>
+    <td></td>
+</tr>
+<tr>
+    <td>jedi-vim</td>
+    <td></td>
+</tr>
+<tr>
+    <td>emmet-vim</td>
+    <td></td>
+</tr>
+<tr>
+    <td>vim-css-color</td>
+    <td></td>
+</tr>
+<tr>
+    <td>vim-less</td>
+    <td></td>
+</tr>
+<tr>
+    <td>vim-jade</td>
+    <td></td>
+</tr>
+<tr>
+    <td>vim-javascript</td>
+    <td></td>
+</tr>
+<tr>
+    <td>jquery.vim</td>
+    <td></td>
+</tr>
+<tr>
+    <td>tern_for_vim</td>
+    <td></td>
+</tr>
+<tr>
+    <td>vim-json</td>
+    <td></td>
+</tr>
+<tr>
+    <td>gist-vim</td>
+    <td></td>
+</tr>
+<tr>
+    <td>webapi-vim</td>
+    <td></td>
+</tr>
+
+</tbody>
+</table>
