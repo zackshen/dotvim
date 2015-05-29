@@ -1,20 +1,29 @@
 ##How to build vim
-    # git clone https://github.com/b4winckler/vim/tree/v7-4-402
+under ubuntu, install libs
+
+    # apt-get update
+    # apt-get install -y build-essential autotools-dev automake man pkg-config libevent-dev libncurses-dev libssl-dev libcurl4-openssl-dev curl wget
+    # apt-get install -y libclang-dev
+    # apt-get install -y python-dev
+    # apt-get install -y silversearcher-ag
+    # apt-get install -y git-core
+
+clone vim repo
+
+    # git clone https://github.com/b4winckler/vim
     # cd vim
-    # ./configure --with-features=huge --enable-rubyinterp --enable-pythoninterp --enable-perlinterp --enable-cscope --enable-luainterp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/
+    # ./configure --with-features=huge --enable-rubyinterp \
+       --enable-pythoninterp --enable-perlinterp --enable-cscope \
+       --enable-luainterp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/
 
 ##How to install
     # chmod +x install.sh,
     # run ./install.sh, and wait a mintue, maybe has some error would happen
     # if has error happened, exit it and open vim, run :BundleInstall
 
-##Install The_silver_searcher
-
-[Reference This Guide](https://github.com/ggreer/the_silver_searcher)
-
 ##Install YouCompleteMe
     # cd ~/.vim/bundle/YouCompleteMe/
-    # ./install.sh --clang-completer
+    # ./install.sh --clang-completer --system-libclang
 
 ##Install Ternjs
     # cd ~/.vim/bundle/tern_for_vim
@@ -118,10 +127,6 @@ but you can set http_proxy for go get, like below
 </tr>
 <tr>
     <td>vim-snippets</td>
-    <td></td>
-</tr>
-<tr>
-    <td>TaskList.vim</td>
     <td></td>
 </tr>
 <tr>

@@ -4,6 +4,7 @@
 #
 #########################################
 
+
 VIM_RT=`pwd`
 if [ ! -d $VIM_RT/bundle ]; then
     mkdir -p $VIM_RT/bundle
