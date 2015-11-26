@@ -26,8 +26,6 @@ Bundle 'suan/vim-instant-markdown'
 " Source Control
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
-Bundle 'vim-scripts/vcscommand.vim'
-Bundle 'zackshen/vim-svnlog'
 
 " Go
 Bundle 'fatih/vim-go'
@@ -47,6 +45,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'nono/jquery.vim'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'elzr/vim-json'
+Bundle 'mxw/vim-jsx'
 
 " Coffeescript
 Bundle 'kchmck/vim-coffee-script'

@@ -125,28 +125,16 @@ set iskeyword+=-
     set wildmenu 
 " }
 
-" JQuery {
-    au BufRead,BufNewFile *.js set syntax=jquery	
-"}
-
 " youcompleteme {
     let g:ycm_autoclose_preview_window_after_completion=1
     let g:ycm_seed_identifiers_with_syntax=1
-    let g:jedi#goto_assignments_command='<leader>jg'
-    let g:jedi#goto_definitions_command='<leader>jd'
+    let g:ycm_auto_trigger = 1
     nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
-    if !empty(glob("~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"))
-        let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
-    endif
-    if !empty(glob("~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"))
-        let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-    endif
 "}
-
 
 " jedi {
     autocmd FileType python setlocal completeopt-=preview
-    " work with ycm
+    "" work with ycm
     let g:jedi#use_tabs_not_buffers = 0
     let g:jedi#auto_vim_configuration = 0
     let g:jedi#popup_on_dot = 0
@@ -171,24 +159,13 @@ set iskeyword+=-
     if !exists('g:airline_symbols')
         let g:airline_symbols = {}
     endif
-
-    let g:airline_enable_branch     = 1
-    let g:airline_enable_syntastic  = 1
-
     let g:airline_theme             = 'badwolf'
-    " let g:airline_left_sep          = '⮀'
-    " let g:airline_left_alt_sep      = '⮁'
-    " let g:airline_right_sep         = '⮂'
-    " let g:airline_right_alt_sep     = '⮃'
     let g:airline_left_sep          = ''
     let g:airline_left_alt_sep      = ''
     let g:airline_right_sep         = ''
     let g:airline_right_alt_sep     = ''
-
     let g:airline_symbols.branch = '⭠'
     let g:airline_symbols.readonly = '⭤'
-
-    " let g:airline_section_c = '%t'
 " }
 
 
@@ -205,8 +182,8 @@ set iskeyword+=-
     let g:syntastic_warning_symbol='>'
     let g:syntastic_check_on_open=1
     let g:syntastic_enable_highlighting=0
-    let g:syntastic_python_checkers=['pyflakes']
-    let g:syntastic_javascript_checkers = ['jshint']
+    let g:syntastic_python_checkers=['flake8']
+    let g:syntastic_javascript_checkers = ['eslint']
     let g:pyflakes_use_quickfix = 0
 " }
 
