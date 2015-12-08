@@ -46,6 +46,7 @@ Bundle 'nono/jquery.vim'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'elzr/vim-json'
 Bundle 'mxw/vim-jsx'
+Bundle 'heavenshell/vim-jsdoc'
 
 " Coffeescript
 Bundle 'kchmck/vim-coffee-script'
