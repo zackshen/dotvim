@@ -52,6 +52,9 @@ Bundle 'heavenshell/vim-jsdoc'
 " Coffeescript
 Bundle 'kchmck/vim-coffee-script'
 
+" Elm
+Bundle 'lambdatoast/elm.vim'
+
 " github
 Bundle 'mattn/gist-vim'
 Bundle 'mattn/webapi-vim'
