@@ -97,7 +97,7 @@ set iskeyword+=-
     "}
 
     " Ack {
-        let g:ackprg = 'ag --nogroup --nocolor --column --ignore-dir fixture --ignore-dir fixtures --ignore-dir idetest --ignore-dir jstest --ignore "data.json"'
+        let g:ackprg = 'ag --nogroup --nocolor --column --ignore-dir fixture --ignore-dir fixtures --ignore-dir idetest --ignore-dir jstest --ignore-dir node_modules --ignore "data.json"'
         noremap <Leader>a :Ack 
     " }
 
@@ -210,7 +210,15 @@ set iskeyword+=-
 
 " Ctrl-p {
     let g:ctrlp_extensions = ['funky']
+    let g:ctrlp_max_height=15
+    if executable('ag')
+        let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    endif
     let g:ctrlp_funky_syntax_highlight = 1
+    let g:ctrlp_custom_ignore = {
+      \ 'dir':  '\v[\/]\.(git|hg|svn|node_modules)$',
+      \ 'file': '\v\.(exe|so|dll)$'
+      \ }
     nnoremap <Leader>fu :CtrlPFunky<Cr>
     nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 " }
