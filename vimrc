@@ -125,11 +125,20 @@ set iskeyword+=-
     set wildmenu 
 " }
 
+" {
+    au BufRead,BufNewFile *.ts  setlocal filetype=typescript
+" }
+
 " youcompleteme {
     let g:ycm_autoclose_preview_window_after_completion=1
     let g:ycm_seed_identifiers_with_syntax=1
     let g:ycm_auto_trigger = 1
     nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
+    au BufRead,BufNewFile *.ts nnoremap <leader>g :YcmCompleter GoToDefinition<CR>
+    if !exists("g:ycm_semantic_triggers")
+        let g:ycm_semantic_triggers = {}
+    endif
+    let g:ycm_semantic_triggers['typescript'] = ['.']
 "}
 
 " jedi {
@@ -186,6 +195,7 @@ set iskeyword+=-
     let g:syntastic_enable_highlighting=0
     let g:syntastic_python_checkers=['flake8']
     let g:syntastic_javascript_checkers = ['eslint']
+    let g:syntastic_typescript_checkers = ['tsc']
     let g:pyflakes_use_quickfix = 0
 " }
 
