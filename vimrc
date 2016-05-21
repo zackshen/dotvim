@@ -77,11 +77,12 @@ set iskeyword+=-
 	    set guioptions-=L
         set lines=40                " 40 lines of text instead of 24,
         color molokai
-        set guifont=monaco\ for\ Powerline:h14
+        set guifont=Source\ Code\ Pro\ for\ Powerline:h14
     else
         set t_Co=256
         let NERDTreeDirArrows=0
         color wombat256mod
+        set guifont=Source\ Code\ Pro\ for\ Powerline:h14
     endif
 " }
 
@@ -96,7 +97,7 @@ set iskeyword+=-
     "}
 
     " Ack {
-        let g:ackprg = 'ag --nogroup --nocolor --column --ignore-dir fixture --ignore-dir fixtures --ignore-dir idetest --ignore-dir jstest --ignore "data.json"'
+        let g:ackprg = 'ag --nogroup --nocolor --column --ignore-dir fixture --ignore-dir fixtures --ignore-dir idetest --ignore-dir jstest --ignore-dir node_modules --ignore "data.json"'
         noremap <Leader>a :Ack 
     " }
 
@@ -165,16 +166,34 @@ set iskeyword+=-
 " }
 
 " Airline {
-    if !exists('g:airline_symbols')
-        let g:airline_symbols = {}
-    endif
-    let g:airline_theme             = 'badwolf'
-    let g:airline_left_sep          = ''
-    let g:airline_left_alt_sep      = ''
-    let g:airline_right_sep         = ''
-    let g:airline_right_alt_sep     = ''
-    let g:airline_symbols.branch = '⭠'
-    let g:airline_symbols.readonly = '⭤'
+    let g:airline_powerline_fonts=0
+     if !exists('g:airline_symbols')
+         let g:airline_symbols = {}
+     endif
+
+  let g:airline_left_sep = ''
+  let g:airline_left_alt_sep = ''
+  let g:airline_right_sep = ''
+  let g:airline_right_alt_sep = ''
+  let g:airline_symbols.branch = ''
+  let g:airline_symbols.readonly = ''
+  let g:airline_symbols.linenr = ''
+
+     let g:airline_theme             = 'badwolf'
+     "  let g:airline_left_sep = '»'
+     "  let g:airline_left_sep = '▶'
+     "  let g:airline_right_sep = '«'
+     "  let g:airline_right_sep = '◀'
+     "  let g:airline_symbols.crypt = '🔒'
+     "  let g:airline_symbols.linenr = '␊'
+     "  let g:airline_symbols.linenr = '␤'
+     "  let g:airline_symbols.linenr = '¶'
+     "  let g:airline_symbols.branch = '⎇'
+     "  let g:airline_symbols.paste = 'ρ'
+     "  let g:airline_symbols.paste = 'Þ'
+     "  let g:airline_symbols.paste = '∥'
+     "  let g:airline_symbols.notexists = '∄'
+     "  let g:airline_symbols.whitespace = 'Ξ'
 " }
 
 
@@ -201,7 +220,15 @@ set iskeyword+=-
 
 " Ctrl-p {
     let g:ctrlp_extensions = ['funky']
+    let g:ctrlp_max_height=15
+    if executable('ag')
+        let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    endif
     let g:ctrlp_funky_syntax_highlight = 1
+    let g:ctrlp_custom_ignore = {
+      \ 'dir':  '\v[\/]\.(git|hg|svn|node_modules)$',
+      \ 'file': '\v\.(exe|so|dll)$'
+      \ }
     nnoremap <Leader>fu :CtrlPFunky<Cr>
     nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 " }

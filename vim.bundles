@@ -12,7 +12,8 @@ Bundle 'flazz/vim-colorschemes'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'vim-scripts/DrawIt'
 Bundle 'Raimondi/delimitMate'
-Bundle 'bling/vim-airline'
+Bundle 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-commentary'
 Bundle 'scrooloose/syntastic'
@@ -53,6 +54,9 @@ Bundle 'leafgarland/typescript-vim'
 
 " Coffeescript
 Bundle 'kchmck/vim-coffee-script'
+
+" Elm
+Bundle 'lambdatoast/elm.vim'
 
 " github
 Bundle 'mattn/gist-vim'
