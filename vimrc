@@ -3,7 +3,6 @@ set nocompatible               " be iMproved
 set encoding=utf-8
 set fileencodings=utf-8,gbk
 set term=screen-256color
-set wildignorecase
 set iskeyword+=-
 set mouse-=a
 set selection=inclusive
@@ -142,18 +141,6 @@ set iskeyword+=-
     let g:ycm_semantic_triggers['typescript'] = ['.']
 "}
 
-" jedi {
-    autocmd FileType python setlocal completeopt-=preview
-    "" work with ycm
-    let g:jedi#use_tabs_not_buffers = 0
-    let g:jedi#auto_vim_configuration = 0
-    let g:jedi#popup_on_dot = 0
-    let g:jedi#popup_select_first = 0
-    let g:jedi#completions_enabled = 0
-    let g:jedi#completions_command = ""
-    let g:jedi#show_call_signatures = "1"
-" }
-
 " ultisnips {
     let g:UltiSnipsExpandTrigger="<leader>s"
     let g:UltiSnipsJumpForwardTrigger="<c-b>"
@@ -175,8 +162,8 @@ set iskeyword+=-
     let g:airline_left_alt_sep      = ''
     let g:airline_right_sep         = ''
     let g:airline_right_alt_sep     = ''
-    let g:airline_symbols.branch = '⭠'
-    let g:airline_symbols.readonly = '⭤'
+    "let g:airline_symbols.branch = '⭠'
+    "let g:airline_symbols.readonly = '⭤'
 " }
 
 
