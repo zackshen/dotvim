@@ -162,10 +162,12 @@ set iskeyword+=-
     let g:airline_left_alt_sep      = ''
     let g:airline_right_sep         = ''
     let g:airline_right_alt_sep     = ''
-    "let g:airline_symbols.branch = '⭠'
-    "let g:airline_symbols.readonly = '⭤'
 " }
 
+" {
+    let g:ale_sign_column_always = 1
+    let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+" }
 
 " Json {
     nmap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
@@ -174,19 +176,6 @@ set iskeyword+=-
 " GitGutter {
     let g:gitgutter_enabled = 0
 "
-
-" syntasitic {
-    let g:syntastic_error_symbol='>>'
-    let g:syntastic_style_error_symbol='>>'
-    let g:syntastic_warning_symbol='>'
-    let g:syntastic_style_warning_symbol='>'
-    let g:syntastic_check_on_open=0
-    let g:syntastic_enable_highlighting=0
-    let g:syntastic_python_checkers=['flake8']
-    let g:syntastic_javascript_checkers = ['eslint']
-    let g:syntastic_typescript_checkers = ['tsc']
-    let g:pyflakes_use_quickfix = 0
-" }
 
 " Ctrl-p {
     let g:ctrlp_extensions = ['funky']
