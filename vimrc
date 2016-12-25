@@ -100,6 +100,10 @@ set iskeyword+=-
         noremap <Leader>a :Ack 
     " }
 
+    " Grepper {
+        nnoremap <leader>a :Grepper<cr>
+    " }
+
     " Nerdtree {
 
         map <F4> :NERDTreeToggle<CR>
