@@ -23,6 +23,7 @@ Bundle 'honza/vim-snippets'
 Bundle 'suan/vim-instant-markdown'
 Bundle 'rizzatti/dash.vim'
 Bundle 'editorconfig/editorconfig-vim'
+Bundle 'skywind3000/asyncrun.vim'
 
 " Source Control
 Bundle 'tpope/vim-fugitive'
@@ -50,6 +51,9 @@ Bundle 'mxw/vim-jsx'
 Bundle 'heavenshell/vim-jsdoc'
 Bundle 'posva/vim-vue'
 Bundle 'leafgarland/typescript-vim'
+Bundle 'peitalin/vim-jsx-typescript'
+"Bundle 'Quramy/tsuquyomi'
+
 
 " Coffeescript
 Bundle 'kchmck/vim-coffee-script'

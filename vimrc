@@ -95,17 +95,11 @@ set iskeyword+=-
         vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
     "}
 
-    " Ack {
-        let g:ackprg = 'ag --nogroup --nocolor --column --ignore-dir fixture --ignore-dir fixtures --ignore-dir idetest --ignore-dir jstest --ignore-dir node_modules --ignore "data.json"'
-        noremap <Leader>a :Ack 
-    " }
-
     " Grepper {
         nnoremap <leader>a :Grepper<cr>
     " }
 
     " Nerdtree {
-
         map <F4> :NERDTreeToggle<CR>
         imap <F4> <ESC>:NERDTreeToggle<CR>
 
@@ -131,6 +125,7 @@ set iskeyword+=-
 
 " {
     au BufRead,BufNewFile *.ts  setlocal filetype=typescript
+    au BufRead,BufNewFile *.tsx setlocal filetype=typescript.jsx
 " }
 
 " youcompleteme {
@@ -143,7 +138,24 @@ set iskeyword+=-
         let g:ycm_semantic_triggers = {}
     endif
     let g:ycm_semantic_triggers['typescript'] = ['.']
+    let g:ycm_semantic_triggers['typescript.jsx'] = ['.']
+
+    let g:ycm_python_binary_path = '/Users/zack/anaconda2/bin/python'
+    let g:ycm_log_level = 'debug'
 "}
+
+" ale {
+    "let g:ale_sign_column_always = 1
+    let g:ale_linters = {
+    \   'typescript': ['tslint'],
+    \   'typescript.jsx': ['tslint']
+    \}
+
+    let g:ale_fixers = {
+    \   'typescript': ['tslint'],
+    \   'typescript.jsx': ['tslint']
+    \}
+" }
 
 " ultisnips {
     let g:UltiSnipsExpandTrigger="<leader>s"
@@ -219,4 +231,12 @@ set iskeyword+=-
     " godef
     au FileType go nmap <leader>g <Plug>(go-def)
     au FileType go nmap <Leader>ds <Plug>(go-def-split)
+" }
+
+" jsx {
+    let g:jsx_ext_required = 0
+" }
+
+" editorconfig {
+    let g:EditorConfig_core_mode = 'external_command'
 " }
