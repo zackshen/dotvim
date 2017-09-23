@@ -133,6 +133,7 @@ set iskeyword+=-
     let g:ycm_seed_identifiers_with_syntax=1
     let g:ycm_auto_trigger = 1
     nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
+    au BufRead,BufNewFile *.tsx nnoremap <leader>g :YcmCompleter GoToDefinition<CR>
     au BufRead,BufNewFile *.ts nnoremap <leader>g :YcmCompleter GoToDefinition<CR>
     if !exists("g:ycm_semantic_triggers")
         let g:ycm_semantic_triggers = {}

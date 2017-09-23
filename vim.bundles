@@ -51,8 +51,7 @@ Bundle 'mxw/vim-jsx'
 Bundle 'heavenshell/vim-jsdoc'
 Bundle 'posva/vim-vue'
 Bundle 'leafgarland/typescript-vim'
-Bundle 'peitalin/vim-jsx-typescript'
-"Bundle 'Quramy/tsuquyomi'
+Bundle 'HerringtonDarkholme/yats.vim'
 
 
 " Coffeescript
